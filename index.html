@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Control de càstigs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Càstigs actius</h1>
+    <ul id="llistatCastigs"></ul>
+
+    <hr>
+
+    <h2>🔐 Zona per a pares</h2>
+    <div id="loginSection">
+      <form id="loginForm">
+        <label for="loginUser">Usuari</label>
+        <input type="text" id="loginUser" required>
+        <label for="loginPass">Contrasenya</label>
+        <input type="password" id="loginPass" required>
+        <button type="submit">Inicia sessió</button>
+      </form>
+      <p id="loginError" class="error-msg"></p>
+    </div>
+
+    <div id="zonaPrivada" style="display:none;">
+      <h2>Afegir càstig</h2>
+      <form id="castigForm">
+        <label for="nen">Nen:</label>
+        <select id="nen" required>
+          <option>Mariona</option>
+          <option>Blanca</option>
+          <option>Joan</option>
+          <option>Andreu</option>
+          <option>Tini</option>
+        </select>
+
+        <label for="tipus">Tipus:</label>
+        <select id="tipus" required>
+          <option value="Sense play">Sense play</option>
+          <option value="Sense mòbil">Sense tele</option>
+          <option value="Sense tele">Sense tele</option>
+          <option value="Altres">Un altre càstig</option>
+        </select>
+
+        <div id="altresContainer" style="display:none;">
+          <label for="altres">Especifica:</label>
+          <input type="text" id="altres">
+        </div>
+
+        <label for="durada">Durada:</label>
+        <select id="durada" required>
+          <option>1 hora</option>
+          <option>2 hores</option>
+          <option>3 hores</option>
+          <option>5 hores</option>
+          <option>10 hores</option>
+          <option>1 dia</option>
+          <option>2 dies</option>
+          <option>3 dies</option>
+          <option>7 dies</option>
+          <option>1 mes</option>
+        </select>
+
+        <button type="submit">Afegir càstig</button>
+      </form>
+
+      <button id="logoutBtn">Tancar sessió</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

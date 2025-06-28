@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Gestió de càstigs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Afegir un càstig</h1>
+    <form id="castigForm">
+      <label for="nen">Selecciona un nen:</label>
+      <select id="nen" required>
+        <option value="">-- Escull un nen --</option>
+        <option>Mariona</option>
+        <option>Blanca</option>
+        <option>Joan</option>
+        <option>Andreu</option>
+        <option>Tini</option>
+      </select>
+
+      <label for="tipus">Tipus de càstig:</label>
+      <select id="tipus" required>
+        <option value="">-- Escull un càstig --</option>
+        <option value="Sense play">Sense play</option>
+        <option value="Sense tele">Sense tele</option>
+        <option value="Altres">Un altre càstig</option>
+      </select>
+
+      <div id="altreCastigContainer" style="display: none;">
+        <label for="altres">Especifica el càstig:</label>
+        <input type="text" id="altres">
+      </div>
+
+      <label for="durada">Durada:</label>
+      <select id="durada" required>
+        <option value="">-- Escull una durada --</option>
+        <option>1 hora</option>
+        <option>2 hores</option>
+        <option>3 hores</option>
+        <option>5 hores</option>
+        <option>10 hores</option>
+        <option>1 dia</option>
+        <option>2 dies</option>
+        <option>3 dies</option>
+        <option>7 dies</option>
+        <option>1 mes</option>
+      </select>
+
+      <button type="submit">Afegir càstig</button>
+    </form>
+
+    <h2>Càstigs actius</h2>
+    <ul id="castigsActius"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
